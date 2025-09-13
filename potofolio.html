@@ -1,0 +1,122 @@
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Linkedin, Code, Database, Globe } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="p-6 max-w-5xl mx-auto font-sans text-white bg-gradient-to-br from-gray-900 via-gray-800 to-black min-h-screen">
+      {/* Hero Section */}
+      <header className="text-center mb-16">
+        <motion.img
+          src="https://avatars.githubusercontent.com/u/000000?v=4" // replace with your image
+          alt="profile"
+          className="w-32 h-32 mx-auto rounded-full border-4 border-blue-400 shadow-lg"
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+        <h1 className="text-4xl font-bold mt-4">Varthe Durga Charan Naik</h1>
+        <p className="text-lg text-gray-300">Computer Science Student @ IIITM Gwalior</p>
+        <div className="flex flex-wrap justify-center gap-4 mt-3 text-gray-400 text-sm">
+          <span className="flex items-center gap-1"><MapPin size={16}/> Kadapa, A.P</span>
+          <span className="flex items-center gap-1"><Mail size={16}/> durgacharannaikn@gmail</span>
+          <span className="flex items-center gap-1"><Phone size={16}/> 7382421641</span>
+        </div>
+        <a
+          href="https://www.linkedin.com/in/durgacharannaik-naik-73882a253/"
+          className="mt-3 inline-block px-4 py-2 bg-blue-500 rounded-xl text-white hover:bg-blue-600 transition"
+          target="_blank"
+        >
+          <Linkedin className="inline mr-2" size={18}/> LinkedIn
+        </a>
+      </header>
+
+      {/* Profile Summary */}
+      <motion.section
+        className="mb-12 bg-gray-800 p-6 rounded-2xl shadow-md"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-3 text-blue-400">Profile Summary</h2>
+        <p>
+          A passionate and dedicated computer science student skilled in Python, HTML, CSS,
+          JavaScript, and MySQL. Experienced in creating dynamic web apps like a Complaint
+          Management System and Calculator. Seeking hands-on industry exposure to build innovative solutions.
+        </p>
+      </motion.section>
+
+      {/* Skills */}
+      <motion.section
+        className="mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-5 text-blue-400">Skills</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="bg-gray-800 p-4 rounded-xl shadow flex items-center gap-3">
+            <Code className="text-green-400"/> Python
+          </div>
+          <div className="bg-gray-800 p-4 rounded-xl shadow flex items-center gap-3">
+            <Globe className="text-yellow-400"/> HTML, CSS, JavaScript
+          </div>
+          <div className="bg-gray-800 p-4 rounded-xl shadow flex items-center gap-3">
+            <Database className="text-purple-400"/> MySQL
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Projects */}
+      <motion.section
+        className="mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-5 text-blue-400">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-gray-800 p-5 rounded-xl shadow hover:scale-105 transition">
+            <h3 className="font-bold text-lg">Complaint Management Website</h3>
+            <p className="text-gray-400 text-sm mb-2">Python, HTML, CSS, MySQL</p>
+            <a
+              href="https://hostel-complaint-management.vercel.app/"
+              target="_blank"
+              className="text-blue-400 underline"
+            >
+              View Project →
+            </a>
+          </div>
+          <div className="bg-gray-800 p-5 rounded-xl shadow hover:scale-105 transition">
+            <h3 className="font-bold text-lg">Calculator Website</h3>
+            <p className="text-gray-400 text-sm mb-2">JavaScript, HTML, CSS</p>
+            <span className="text-gray-500 text-sm">(Localhost only)</span>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Education */}
+      <motion.section
+        className="mb-12 bg-gray-800 p-6 rounded-2xl shadow-md"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-3 text-blue-400">Education</h2>
+        <p><strong>IIITM Gwalior</strong> (2022–2026)</p>
+        <p>B.Tech in Computer Science | GPA: 6.13 / 10.0</p>
+      </motion.section>
+
+      {/* Languages & Hobbies */}
+      <motion.section
+        className="mb-12"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-2xl font-semibold mb-3 text-blue-400">Languages & Hobbies</h2>
+        <p><strong>Languages:</strong> English (Fluent), Hindi, Telugu</p>
+        <p><strong>Hobbies:</strong> Web development, tech blogs, online courses</p>
+      </motion.section>
+    </div>
+  );
+}
